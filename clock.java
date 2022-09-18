@@ -4,8 +4,10 @@ import java.awt.*;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-public class clock extends JFrame{
+public class clock {
 
+	JFrame frame = new JFrame("Clock");
+	
 	SimpleDateFormat timeFormat;
 	SimpleDateFormat dayFormat;
 	SimpleDateFormat dateFormat;
@@ -38,14 +40,14 @@ public class clock extends JFrame{
 		dateLabel.setFont(new Font("MV Boli",Font.BOLD,37));
 		dateLabel.setForeground(Color.BLACK);
 		
-		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-		this.add(timeLabel);
-		this.add(dayLabel);
-		this.add(dateLabel);
-		this.setTitle("Clock");
-		this.setLayout(new FlowLayout());
-		this.setSize(450,450);
-		this.setVisible(true);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.add(timeLabel);
+		frame.add(dayLabel);
+		frame.add(dateLabel);
+		frame.setTitle("Clock");
+		frame.setLayout(new FlowLayout());
+		frame.setSize(450,450);
+		frame.setVisible(true);
 		
 		setTime();
 	}
